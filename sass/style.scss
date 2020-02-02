@@ -41,16 +41,21 @@ TOP PART
 **********************************************/
 
 .top {
+  width: 100%;
   height: 40vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(../images/euro-background.jpg);
   background-size: cover;
   background-position: center;
+  display: flex;
+  justify-content: center;
   position: relative;
 }
 
 .budget {
   width: 350px;
   color: #ffffff;
+  justify-content: center;
+  align-items: center;
   transform: translate(-50%, -50%);
   position: absolute;
   top: 50%;
@@ -66,7 +71,6 @@ TOP PART
   &__value {
     margin-bottom: 25px;
     font-size: 46px;
-    font-weight: 300;
     letter-spacing: 2px;
     text-align: center;
   }
@@ -157,7 +161,7 @@ BOTTOM PART
   }
 
   &__description {
-    max-width: 400px;
+    width: 400px;
     height: auto;
   }
 
@@ -204,7 +208,7 @@ BOTTOM PART
 
 .income {
   margin-right: 50px;
-  width: 475px;
+  width: 470px;
   height: auto;
   float: left;
   text-align: center;
@@ -215,7 +219,7 @@ BOTTOM PART
 }
 
 .expenses {
-  width: 475px;
+  width: 470px;
   height: auto;
   float: left;
   text-align: center;
@@ -272,7 +276,6 @@ BOTTOM PART
   }
 
   &__delete--btn {
-    display: none;
     display: inline-block;
     background: none;
     font-size: 22px;
@@ -310,4 +313,78 @@ BOTTOM PART
 }
 .item:hover .item__percentage {
   transform: translateX(-20px);
+}
+
+@media (max-width: 992px) {
+  .budget {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+
+    &__title {
+      margin-top: 30px;
+    }
+
+    &__value {
+      margin-bottom: 15px;
+    }
+  }
+
+  .bottom {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .add__container {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .add__type,
+  .add__description,
+  .add__value,
+  .add__btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .add__type,
+  .add__description,
+  .add__value {
+    margin: 5px 5px 5px 0;
+  }
+
+  .add__btn {
+    margin: 15px 5px 0 5px;
+    font-size: 45px;
+  }
+
+  .container {
+    margin: 40px auto;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .income,
+  .expenses {
+    margin: 10px 0 35px;
+    width: 100%;
+    min-width: 280px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .income__list,
+  .expenses__list {
+    width: 100%;
+    height: auto;
+  }
 }
